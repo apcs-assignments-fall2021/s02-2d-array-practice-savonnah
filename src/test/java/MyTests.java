@@ -105,8 +105,11 @@ public class MyTests {
                 {-3,  5,  7, 99, 21},
                 {2,  38,  1, 44,  6} };
 
-        assertEquals(true, equal2DArrays(m1l, MyMain.leftShift(m1)),"The array should have looked like:\n" + Arrays.deepToString(m1l) + "\n but instead, it looked like:\n" + Arrays.deepToString(MyMain.leftShift(m1)));
-        assertEquals(true, equal2DArrays(m2l, MyMain.leftShift(m2)),"The array should have looked like:\n" + Arrays.deepToString(m2l) + "\n but instead, it looked like:\n" + Arrays.deepToString(MyMain.leftShift(m2)));
+        int[][] shifted1 = MyMain.leftShift(m1);
+        int[][] shifted2 = MyMain.leftShift(m2);
+
+        assertEquals(true, equal2DArrays(m1l, shifted1),"The array should have looked like:\n" + Arrays.deepToString(m1l) + "\n but instead, it looked like:\n" + Arrays.deepToString(shifted1));
+        assertEquals(true, equal2DArrays(m2l, shifted2),"The array should have looked like:\n" + Arrays.deepToString(m2l) + "\n but instead, it looked like:\n" + Arrays.deepToString(shifted2));
     }
 
     @Test
